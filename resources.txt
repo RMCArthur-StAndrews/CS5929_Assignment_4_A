@@ -1,0 +1,3 @@
+pandas
+numpy
+git+https://github.com/conjure-cp/conjure-notebook.git@v0.0.8

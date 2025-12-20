@@ -1,0 +1,540 @@
+{
+  "prison": {
+    "name": "HMP & YOI Grampian",
+    "sections": [
+      {
+        "section_id": "S1",
+        "section_name": "North Wing Section",
+        "age_category": "Adult",
+        "wards": [
+          {
+            "ward_id": "S1W1",
+            "supervision_level": "High",
+            "wings": [
+              {
+                "wing_id": "S1W1A",
+                "sex_assignment": "Male",
+                "cells": [
+                  {"cell_id": "S1W1A-C01", "cell_type": "single", "beds": [{"bed_id": "S1W1A-C01-B1", "occupied": true, "prisoner_id": "P00001"}]},
+                  {"cell_id": "S1W1A-C02", "cell_type": "single", "beds": [{"bed_id": "S1W1A-C02-B1", "occupied": true, "prisoner_id": "P00002"}]},
+                  {"cell_id": "S1W1A-C03", "cell_type": "single", "beds": [{"bed_id": "S1W1A-C03-B1", "occupied": true, "prisoner_id": "P00003"}]},
+                  {"cell_id": "S1W1A-C04", "cell_type": "single", "beds": [{"bed_id": "S1W1A-C04-B1", "occupied": true, "prisoner_id": "P00004"}]},
+                  {"cell_id": "S1W1A-C05", "cell_type": "single", "beds": [{"bed_id": "S1W1A-C05-B1", "occupied": true, "prisoner_id": "P00005"}]},
+                  {"cell_id": "S1W1A-C06", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W1A-C06-B1", "occupied": true, "prisoner_id": "P00006"},
+                    {"bed_id": "S1W1A-C06-B2", "occupied": true, "prisoner_id": "P00007"},
+                    {"bed_id": "S1W1A-C06-B3", "occupied": true, "prisoner_id": "P00008"},
+                    {"bed_id": "S1W1A-C06-B4", "occupied": true, "prisoner_id": "P00009"}
+                  ]},
+                  {"cell_id": "S1W1A-C07", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W1A-C07-B1", "occupied": true, "prisoner_id": "P00010"},
+                    {"bed_id": "S1W1A-C07-B2", "occupied": true, "prisoner_id": "P00011"},
+                    {"bed_id": "S1W1A-C07-B3", "occupied": true, "prisoner_id": "P00012"},
+                    {"bed_id": "S1W1A-C07-B4", "occupied": true, "prisoner_id": "P00013"}
+                  ]},
+                  {"cell_id": "S1W1A-C08", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W1A-C08-B1", "occupied": true, "prisoner_id": "P00014"},
+                    {"bed_id": "S1W1A-C08-B2", "occupied": false, "prisoner_id": null},
+                    {"bed_id": "S1W1A-C08-B3", "occupied": false, "prisoner_id": null},
+                    {"bed_id": "S1W1A-C08-B4", "occupied": true, "prisoner_id": "P00017"}
+                  ]}
+                ]
+              },
+              {
+                "wing_id": "S1W1B",
+                "sex_assignment": "Female",
+                "cells": [
+                  {"cell_id": "S1W1B-C01", "cell_type": "single", "beds": [{"bed_id": "S1W1B-C01-B1", "occupied": true, "prisoner_id": "P00018"}]},
+                  {"cell_id": "S1W1B-C02", "cell_type": "single", "beds": [{"bed_id": "S1W1B-C02-B1", "occupied": true, "prisoner_id": "P00019"}]},
+                  {"cell_id": "S1W1B-C03", "cell_type": "single", "beds": [{"bed_id": "S1W1B-C03-B1", "occupied": true, "prisoner_id": "P00020"}]},
+                  {"cell_id": "S1W1B-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W1B-C03-B1", "occupied": true, "prisoner_id": "P00024"},
+                    {"bed_id": "S1W1B-C03-B2", "occupied": true, "prisoner_id": "P00025"},
+                    {"bed_id": "S1W1B-C03-B3", "occupied": true, "prisoner_id": "P00021"},
+                    {"bed_id": "S1W1B-C03-B4", "occupied": true, "prisoner_id": "P00022"}
+                  ]},
+                  {"cell_id": "S1W1B-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W1B-C05-B1", "occupied": true, "prisoner_id": "P00023"},
+                    {"bed_id": "S1W1B-C05-B2", "occupied": true, "prisoner_id": "P00026"},
+                    {"bed_id": "S1W1B-C05-B3", "occupied": false, "prisoner_id": null},
+                    {"bed_id": "S1W1B-C05-B4", "occupied": true, "prisoner_id": "P00028"}
+                  ]}
+                ]
+              }
+            ]
+          },
+          {
+            "ward_id": "S1W2",
+            "supervision_level": "Medium",
+            "wings": [
+              {
+                "wing_id": "S1W2A",
+                "sex_assignment": "Male",
+                "cells": [
+                  {"cell_id": "S1W2A-C01", "cell_type": "single", "beds": [{"bed_id": "S1W2A-C01-B1", "occupied": true, "prisoner_id": "P00029"}]},
+                  {"cell_id": "S1W2A-C02", "cell_type": "single", "beds": [{"bed_id": "S1W2A-C02-B1", "occupied": true, "prisoner_id": "P00030"}]},
+                  {"cell_id": "S1W2A-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2A-C03-B1", "occupied": true, "prisoner_id": "P00031"},
+                    {"bed_id": "S1W2A-C03-B2", "occupied": true, "prisoner_id": "P00032"},
+                    {"bed_id": "S1W2A-C03-B3", "occupied": true, "prisoner_id": "P00033"},
+                    {"bed_id": "S1W2A-C03-B4", "occupied": true, "prisoner_id": "P00034"}
+                  ]},
+                  {"cell_id": "S1W2A-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2A-C04-B1", "occupied": true, "prisoner_id": "P00035"},
+                    {"bed_id": "S1W2A-C04-B2", "occupied": true, "prisoner_id": "P00036"},
+                    {"bed_id": "S1W2A-C04-B3", "occupied": true, "prisoner_id": "P00037"},
+                    {"bed_id": "S1W2A-C04-B4", "occupied": true, "prisoner_id": "P00038"}
+                  ]},
+                  {"cell_id": "S1W2A-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2A-C05-B1", "occupied": true, "prisoner_id": "P00039"},
+                    {"bed_id": "S1W2A-C05-B2", "occupied": true, "prisoner_id": "P00040"},
+                    {"bed_id": "S1W2A-C05-B3", "occupied": true, "prisoner_id": "P00041"},
+                    {"bed_id": "S1W2A-C05-B4", "occupied": true, "prisoner_id": "P00042"}
+                  ]},
+                  {"cell_id": "S1W2A-C06", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2A-C06-B1", "occupied": true, "prisoner_id": "P00043"},
+                    {"bed_id": "S1W2A-C06-B2", "occupied": true, "prisoner_id": "P00044"},
+                    {"bed_id": "S1W2A-C06-B3", "occupied": true, "prisoner_id": "P00045"},
+                    {"bed_id": "S1W2A-C06-B4", "occupied": true, "prisoner_id": "P00050"}
+                  ]},
+                  {"cell_id": "S1W2A-C07", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2A-C07-B1", "occupied": true, "prisoner_id": "P00046"},
+                    {"bed_id": "S1W2A-C07-B2", "occupied": false, "prisoner_id": null},
+                    {"bed_id": "S1W2A-C07-B3", "occupied": false, "prisoner_id": null},
+                    {"bed_id": "S1W2A-C07-B4", "occupied": true, "prisoner_id": "P00049"}
+                  ]}
+                ]
+              },
+              {
+                "wing_id": "S1W2B",
+                "sex_assignment": "Female",
+                "cells": [
+                  {"cell_id": "S1W2B-C01", "cell_type": "single", "beds": [{"bed_id": "S1W2B-C01-B1", "occupied": true, "prisoner_id": "P00051"}]},
+                  {"cell_id": "S1W2B-C02", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2B-C02-B1", "occupied": true, "prisoner_id": "P00052"},
+                    {"bed_id": "S1W2B-C02-B2", "occupied": true, "prisoner_id": "P00053"},
+                    {"bed_id": "S1W2B-C02-B3", "occupied": true, "prisoner_id": "P00054"},
+                    {"bed_id": "S1W2B-C02-B4", "occupied": true, "prisoner_id": "P00055"}
+                  ]},
+                  {"cell_id": "S1W2B-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2B-C03-B1", "occupied": true, "prisoner_id": "P00056"},
+                    {"bed_id": "S1W2B-C03-B2", "occupied": true, "prisoner_id": "P00057"},
+                    {"bed_id": "S1W2B-C03-B3", "occupied": true, "prisoner_id": "P00058"},
+                    {"bed_id": "S1W2B-C03-B4", "occupied": true, "prisoner_id": "P00059"}
+                  ]},
+                  {"cell_id": "S1W2B-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2B-C04-B1", "occupied": true, "prisoner_id": "P00060"},
+                    {"bed_id": "S1W2B-C04-B2", "occupied": true, "prisoner_id": "P00061"},
+                    {"bed_id": "S1W2B-C04-B3", "occupied": true, "prisoner_id": "P00062"},
+                    {"bed_id": "S1W2B-C04-B4", "occupied": false, "prisoner_id": null}
+                  ]}
+                ]
+              },
+              {
+                "wing_id": "S1W2C",
+                "sex_assignment": "Male",
+                "cells": [
+                  {"cell_id": "S1W2C-C01", "cell_type": "single", "beds": [{"bed_id": "S1W2C-C01-B1", "occupied": true, "prisoner_id": "P00064"}]},
+                  {"cell_id": "S1W2C-C02", "cell_type": "single", "beds": [{"bed_id": "S1W2C-C02-B1", "occupied": true, "prisoner_id": "P00065"}]},
+                  {"cell_id": "S1W2C-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2C-C03-B1", "occupied": true, "prisoner_id": "P00066"},
+                    {"bed_id": "S1W2C-C03-B2", "occupied": true, "prisoner_id": "P00067"},
+                    {"bed_id": "S1W2C-C03-B3", "occupied": true, "prisoner_id": "P00068"},
+                    {"bed_id": "S1W2C-C03-B4", "occupied": true, "prisoner_id": "P00069"}
+                  ]},
+                  {"cell_id": "S1W2C-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2C-C04-B1", "occupied": true, "prisoner_id": "P00070"},
+                    {"bed_id": "S1W2C-C04-B2", "occupied": true, "prisoner_id": "P00071"},
+                    {"bed_id": "S1W2C-C04-B3", "occupied": true, "prisoner_id": "P00072"},
+                    {"bed_id": "S1W2C-C04-B4", "occupied": true, "prisoner_id": "P00073"}
+                  ]},
+                  {"cell_id": "S1W2C-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S1W2C-C05-B1", "occupied": true, "prisoner_id": "P00074"},
+                    {"bed_id": "S1W2C-C05-B2", "occupied": true, "prisoner_id": "P00075"},
+                    {"bed_id": "S1W2C-C05-B3", "occupied": true, "prisoner_id": "P00076"},
+                    {"bed_id": "S1W2C-C05-B4", "occupied": true, "prisoner_id": "P00077"}
+                  ]}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "S2",
+        "section_name": "South Wing Section",
+        "age_category": "Adult",
+        "wards": [
+          {
+            "ward_id": "S2W1",
+            "supervision_level": "Low",
+            "wings": [
+              {
+                "wing_id": "S2W1A",
+                "sex_assignment": "Male",
+                "cells": [
+                  {"cell_id": "S2W1A-C01", "cell_type": "single", "beds": [{"bed_id": "S2W1A-C01-B1", "occupied": true, "prisoner_id": "P00078"}]},
+                  {"cell_id": "S2W1A-C02", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1A-C02-B1", "occupied": true, "prisoner_id": "P00079"},
+                    {"bed_id": "S2W1A-C02-B2", "occupied": true, "prisoner_id": "P00080"},
+                    {"bed_id": "S2W1A-C02-B3", "occupied": true, "prisoner_id": "P00081"},
+                    {"bed_id": "S2W1A-C02-B4", "occupied": true, "prisoner_id": "P00082"}
+                  ]},
+                  {"cell_id": "S2W1A-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1A-C03-B1", "occupied": true, "prisoner_id": "P00083"},
+                    {"bed_id": "S2W1A-C03-B2", "occupied": true, "prisoner_id": "P00084"},
+                    {"bed_id": "S2W1A-C03-B3", "occupied": true, "prisoner_id": "P00085"},
+                    {"bed_id": "S2W1A-C03-B4", "occupied": true, "prisoner_id": "P00086"}
+                  ]},
+                  {"cell_id": "S2W1A-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1A-C04-B1", "occupied": true, "prisoner_id": "P00087"},
+                    {"bed_id": "S2W1A-C04-B2", "occupied": true, "prisoner_id": "P00088"},
+                    {"bed_id": "S2W1A-C04-B3", "occupied": true, "prisoner_id": "P00089"},
+                    {"bed_id": "S2W1A-C04-B4", "occupied": true, "prisoner_id": "P00090"}
+                  ]},
+                  {"cell_id": "S2W1A-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1A-C05-B1", "occupied": true, "prisoner_id": "P00091"},
+                    {"bed_id": "S2W1A-C05-B2", "occupied": true, "prisoner_id": "P00092"},
+                    {"bed_id": "S2W1A-C05-B3", "occupied": true, "prisoner_id": "P00093"},
+                    {"bed_id": "S2W1A-C05-B4", "occupied": true, "prisoner_id": "P00094"}
+                  ]},
+                  {"cell_id": "S2W1A-C06", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1A-C06-B1", "occupied": true, "prisoner_id": "P00095"},
+                    {"bed_id": "S2W1A-C06-B2", "occupied": true, "prisoner_id": "P00096"},
+                    {"bed_id": "S2W1A-C06-B3", "occupied": true, "prisoner_id": "P00097"},
+                    {"bed_id": "S2W1A-C06-B4", "occupied": true, "prisoner_id": "P00098"}
+                  ]},
+                  {"cell_id": "S2W1A-C07", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1A-C08-B1", "occupied": false, "prisoner_id": null},
+                    {"bed_id": "S2W1A-C08-B2", "occupied": true, "prisoner_id": "P00100"},
+                    {"bed_id": "S2W1A-C08-B3", "occupied": false, "prisoner_id": null},
+                    {"bed_id": "S2W1A-C08-B4", "occupied": true, "prisoner_id": "P00102"}
+                  ]}
+                ]
+              },
+              {
+                "wing_id": "S2W1B",
+                "sex_assignment": "Female",
+                "cells": [
+                  {"cell_id": "S2W1B-C01", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1B-C01-B1", "occupied": true, "prisoner_id": "P00103"},
+                    {"bed_id": "S2W1B-C01-B2", "occupied": true, "prisoner_id": "P00104"},
+                    {"bed_id": "S2W1B-C01-B3", "occupied": true, "prisoner_id": "P00105"},
+                    {"bed_id": "S2W1B-C01-B4", "occupied": true, "prisoner_id": "P00106"}
+                  ]},
+                  {"cell_id": "S2W1B-C02", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1B-C02-B1", "occupied": true, "prisoner_id": "P00107"},
+                    {"bed_id": "S2W1B-C02-B2", "occupied": true, "prisoner_id": "P00108"},
+                    {"bed_id": "S2W1B-C02-B3", "occupied": true, "prisoner_id": "P00109"},
+                    {"bed_id": "S2W1B-C02-B4", "occupied": true, "prisoner_id": "P00110"}
+                  ]},
+                  {"cell_id": "S2W1B-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1B-C03-B1", "occupied": true, "prisoner_id": "P00111"},
+                    {"bed_id": "S2W1B-C03-B2", "occupied": true, "prisoner_id": "P00112"},
+                    {"bed_id": "S2W1B-C03-B3", "occupied": true, "prisoner_id": "P00113"},
+                    {"bed_id": "S2W1B-C03-B4", "occupied": true, "prisoner_id": "P00114"}
+                  ]},
+                  {"cell_id": "S2W1B-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1B-C04-B1", "occupied": true, "prisoner_id": "P00115"},
+                    {"bed_id": "S2W1B-C04-B2", "occupied": true, "prisoner_id": "P00116"},
+                    {"bed_id": "S2W1B-C04-B3", "occupied": true, "prisoner_id": "P00117"},
+                    {"bed_id": "S2W1B-C04-B4", "occupied": true, "prisoner_id": "P00118"}
+                  ]},
+                  {"cell_id": "S2W1B-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W1B-C05-B1", "occupied": true, "prisoner_id": "P00119"},
+                    {"bed_id": "S2W1B-C05-B2", "occupied": true, "prisoner_id": "P00120"},
+                    {"bed_id": "S2W1B-C05-B3", "occupied": false, "prisoner_id": null},
+                    {"bed_id": "S2W1B-C05-B4", "occupied": true, "prisoner_id": "P00122"}
+                  ]}
+                ]
+              }
+            ]
+          },
+          {
+            "ward_id": "S2W2",
+            "supervision_level": "Medium",
+            "wings": [
+              {
+                "wing_id": "S2W2A",
+                "sex_assignment": "Male",
+                "cells": [
+                  {"cell_id": "S2W2A-C01", "cell_type": "single", "beds": [{"bed_id": "S2W2A-C01-B1", "occupied": true, "prisoner_id": "P00123"}]},
+                  {"cell_id": "S2W2A-C02", "cell_type": "single", "beds": [{"bed_id": "S2W2A-C02-B1", "occupied": true, "prisoner_id": "P00124"}]},
+                  {"cell_id": "S2W2A-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W2A-C03-B1", "occupied": true, "prisoner_id": "P00125"},
+                    {"bed_id": "S2W2A-C03-B2", "occupied": true, "prisoner_id": "P00126"},
+                    {"bed_id": "S2W2A-C03-B3", "occupied": true, "prisoner_id": "P00127"},
+                    {"bed_id": "S2W2A-C03-B4", "occupied": true, "prisoner_id": "P00128"}
+                  ]},
+                  {"cell_id": "S2W2A-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W2A-C04-B1", "occupied": true, "prisoner_id": "P00129"},
+                    {"bed_id": "S2W2A-C04-B2", "occupied": true, "prisoner_id": "P00130"},
+                    {"bed_id": "S2W2A-C04-B3", "occupied": true, "prisoner_id": "P00131"},
+                    {"bed_id": "S2W2A-C04-B4", "occupied": true, "prisoner_id": "P00132"}
+                  ]},
+                  {"cell_id": "S2W2A-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W2A-C05-B1", "occupied": true, "prisoner_id": "P00133"},
+                    {"bed_id": "S2W2A-C05-B2", "occupied": true, "prisoner_id": "P00134"},
+                    {"bed_id": "S2W2A-C05-B3", "occupied": true, "prisoner_id": "P00135"},
+                    {"bed_id": "S2W2A-C05-B4", "occupied": true, "prisoner_id": "P00136"}
+                  ]}
+                ]
+              },
+              {
+                "wing_id": "S2W2B",
+                "sex_assignment": "Female",
+                "cells": [
+                  {"cell_id": "S2W2B-C01", "cell_type": "single", "beds": [{"bed_id": "S2W2B-C01-B1", "occupied": true, "prisoner_id": "P00137"}]},
+                  {"cell_id": "S2W2B-C02", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W2B-C02-B1", "occupied": true, "prisoner_id": "P00138"},
+                    {"bed_id": "S2W2B-C02-B2", "occupied": true, "prisoner_id": "P00139"},
+                    {"bed_id": "S2W2B-C02-B3", "occupied": true, "prisoner_id": "P00140"},
+                    {"bed_id": "S2W2B-C02-B4", "occupied": true, "prisoner_id": "P00141"}
+                  ]},
+                  {"cell_id": "S2W2B-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W2B-C03-B1", "occupied": true, "prisoner_id": "P00142"},
+                    {"bed_id": "S2W2B-C03-B2", "occupied": true, "prisoner_id": "P00143"},
+                    {"bed_id": "S2W2B-C03-B3", "occupied": true, "prisoner_id": "P00144"},
+                    {"bed_id": "S2W2B-C03-B4", "occupied": true, "prisoner_id": "P00145"}
+                  ]},
+                  {"cell_id": "S2W2B-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S2W2B-C04-B1", "occupied": true, "prisoner_id": "P00146"},
+                    {"bed_id": "S2W2B-C04-B2", "occupied": true, "prisoner_id": "P00147"},
+                    {"bed_id": "S2W2B-C04-B3", "occupied": true, "prisoner_id": "P00148"},
+                    {"bed_id": "S2W2B-C04-B4", "occupied": true, "prisoner_id": "P00149"}
+                  ]}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "S3",
+        "section_name": "East Wing Section",
+        "age_category": "Young Offenders",
+        "wards": [
+          {
+            "ward_id": "S3W1",
+            "supervision_level": "High",
+            "wings": [
+              {
+                "wing_id": "S3W1A",
+                "sex_assignment": "Male",
+                "cells": [
+                  {"cell_id": "S3W1A-C01", "cell_type": "single", "beds": [{"bed_id": "S3W1A-C01-B1", "occupied": true, "prisoner_id": "P00150"}]},
+                  {"cell_id": "S3W1A-C02", "cell_type": "single", "beds": [{"bed_id": "S3W1A-C02-B1", "occupied": true, "prisoner_id": "P00151"}]},
+                  {"cell_id": "S3W1A-C03", "cell_type": "single", "beds": [{"bed_id": "S3W1A-C03-B1", "occupied": true, "prisoner_id": "P00152"}]},
+                  {"cell_id": "S3W1A-C04", "cell_type": "single", "beds": [{"bed_id": "S3W1A-C04-B1", "occupied": true, "prisoner_id": "P00153"}]},
+                  {"cell_id": "S3W1A-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W1A-C05-B1", "occupied": true, "prisoner_id": "P00154"},
+                    {"bed_id": "S3W1A-C05-B2", "occupied": true, "prisoner_id": "P00155"},
+                    {"bed_id": "S3W1A-C05-B3", "occupied": true, "prisoner_id": "P00156"},
+                    {"bed_id": "S3W1A-C05-B4", "occupied": true, "prisoner_id": "P00157"}
+                  ]},
+                  {"cell_id": "S3W1A-C06", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W1A-C06-B1", "occupied": true, "prisoner_id": "P00158"},
+                    {"bed_id": "S3W1A-C06-B2", "occupied": true, "prisoner_id": "P00159"},
+                    {"bed_id": "S3W1A-C06-B3", "occupied": true, "prisoner_id": "P00160"},
+                    {"bed_id": "S3W1A-C06-B4", "occupied": true, "prisoner_id": "P00161"}
+                  ]},
+                  {"cell_id": "S3W1A-C07", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W1A-C07-B1", "occupied": true, "prisoner_id": "P00162"},
+                    {"bed_id": "S3W1A-C07-B2", "occupied": true, "prisoner_id": "P00163"},
+                    {"bed_id": "S3W1A-C07-B3", "occupied": true, "prisoner_id": "P00164"},
+                    {"bed_id": "S3W1A-C07-B4", "occupied": true, "prisoner_id": "P00165"}
+                  ]}
+                ]
+              },
+              {
+                "wing_id": "S3W1B",
+                "sex_assignment": "Female",
+                "cells": [
+                  {"cell_id": "S3W1B-C01", "cell_type": "single", "beds": [{"bed_id": "S3W1B-C01-B1", "occupied": true, "prisoner_id": "P00166"}]},
+                  {"cell_id": "S3W1B-C02", "cell_type": "single", "beds": [{"bed_id": "S3W1B-C02-B1", "occupied": true, "prisoner_id": "P00167"}]},
+                  {"cell_id": "S3W1B-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W1B-C03-B1", "occupied": true, "prisoner_id": "P00168"},
+                    {"bed_id": "S3W1B-C03-B2", "occupied": true, "prisoner_id": "P00169"},
+                    {"bed_id": "S3W1B-C03-B3", "occupied": true, "prisoner_id": "P00170"},
+                    {"bed_id": "S3W1B-C03-B4", "occupied": true, "prisoner_id": "P00171"}
+                  ]},
+                  {"cell_id": "S3W1B-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W1B-C04-B1", "occupied": true, "prisoner_id": "P00172"},
+                    {"bed_id": "S3W1B-C04-B2", "occupied": true, "prisoner_id": "P00173"},
+                    {"bed_id": "S3W1B-C04-B3", "occupied": true, "prisoner_id": "P00174"},
+                    {"bed_id": "S3W1B-C04-B4", "occupied": true, "prisoner_id": "P00175"}
+                  ]},
+                  {"cell_id": "S3W1B-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W1B-C05-B1", "occupied": true, "prisoner_id": "P00176"},
+                    {"bed_id": "S3W1B-C05-B2", "occupied": false, "prisoner_id": null},
+                    {"bed_id": "S3W1B-C05-B3", "occupied": true, "prisoner_id": "P00178"},
+                    {"bed_id": "S3W1B-C05-B4", "occupied": true, "prisoner_id": "P00179"}
+                  ]}
+                ]
+              }
+            ]
+          },
+          {
+            "ward_id": "S3W2",
+            "supervision_level": "Low",
+            "wings": [
+              {
+                "wing_id": "S3W2A",
+                "sex_assignment": "Male",
+                "cells": [
+                  {"cell_id": "S3W2A-C01", "cell_type": "single", "beds": [{"bed_id": "S3W2A-C01-B1", "occupied": true, "prisoner_id": "P00180"}]},
+                  {"cell_id": "S3W2A-C02", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2A-C02-B1", "occupied": true, "prisoner_id": "P00181"},
+                    {"bed_id": "S3W2A-C02-B2", "occupied": true, "prisoner_id": "P00182"},
+                    {"bed_id": "S3W2A-C02-B3", "occupied": true, "prisoner_id": "P00183"},
+                    {"bed_id": "S3W2A-C02-B4", "occupied": true, "prisoner_id": "P00184"}
+                  ]},
+                  {"cell_id": "S3W2A-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2A-C03-B1", "occupied": true, "prisoner_id": "P00185"},
+                    {"bed_id": "S3W2A-C03-B2", "occupied": true, "prisoner_id": "P00186"},
+                    {"bed_id": "S3W2A-C03-B3", "occupied": true, "prisoner_id": "P00187"},
+                    {"bed_id": "S3W2A-C03-B4", "occupied": true, "prisoner_id": "P00188"}
+                  ]},
+                  {"cell_id": "S3W2A-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2A-C04-B1", "occupied": true, "prisoner_id": "P00189"},
+                    {"bed_id": "S3W2A-C04-B2", "occupied": true, "prisoner_id": "P00190"},
+                    {"bed_id": "S3W2A-C04-B3", "occupied": true, "prisoner_id": "P00191"},
+                    {"bed_id": "S3W2A-C04-B4", "occupied": true, "prisoner_id": "P00192"}
+                  ]},
+                  {"cell_id": "S3W2A-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2A-C05-B1", "occupied": true, "prisoner_id": "P00193"},
+                    {"bed_id": "S3W2A-C05-B2", "occupied": true, "prisoner_id": "P00194"},
+                    {"bed_id": "S3W2A-C05-B3", "occupied": true, "prisoner_id": "P00195"},
+                    {"bed_id": "S3W2A-C05-B4", "occupied": true, "prisoner_id": "P00196"}
+                  ]},
+                  {"cell_id": "S3W2A-C06", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2A-C06-B1", "occupied": true, "prisoner_id": "P00197"},
+                    {"bed_id": "S3W2A-C06-B2", "occupied": true, "prisoner_id": "P00198"},
+                    {"bed_id": "S3W2A-C06-B3", "occupied": true, "prisoner_id": "P00199"},
+                    {"bed_id": "S3W2A-C06-B4", "occupied": true, "prisoner_id": "P00200"}
+                  ]},
+                  {"cell_id": "S3W2A-C07", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2A-C07-B1", "occupied": true, "prisoner_id": "P00201"},
+                    {"bed_id": "S3W2A-C07-B2", "occupied": true, "prisoner_id": "P00202"},
+                    {"bed_id": "S3W2A-C07-B3", "occupied": false, "prisoner_id": null},
+                    {"bed_id": "S3W2A-C07-B4", "occupied": false, "prisoner_id": null}
+                  ]},
+                  {"cell_id": "S3W2A-C08", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2A-C08-B1", "occupied": true, "prisoner_id": "P00203"},
+                    {"bed_id": "S3W2A-C08-B2", "occupied": true, "prisoner_id": "P00204"},
+                    {"bed_id": "S3W2A-C08-B3", "occupied": true, "prisoner_id": "P00205"},
+                    {"bed_id": "S3W2A-C08-B4", "occupied": true, "prisoner_id": "P00206"}
+                  ]}
+                ]
+              },
+              {
+                "wing_id": "S3W2B",
+                "sex_assignment": "Female",
+                "cells": [
+                  {"cell_id": "S3W2B-C01", "cell_type": "single", "beds": [{"bed_id": "S3W2B-C01-B1", "occupied": true, "prisoner_id": "P00207"}]},
+                  {"cell_id": "S3W2B-C02", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2B-C02-B1", "occupied": true, "prisoner_id": "P00208"},
+                    {"bed_id": "S3W2B-C02-B2", "occupied": true, "prisoner_id": "P00209"},
+                    {"bed_id": "S3W2B-C02-B3", "occupied": true, "prisoner_id": "P00210"},
+                    {"bed_id": "S3W2B-C02-B4", "occupied": true, "prisoner_id": "P00211"}
+                  ]},
+                  {"cell_id": "S3W2B-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2B-C03-B1", "occupied": true, "prisoner_id": "P00212"},
+                    {"bed_id": "S3W2B-C03-B2", "occupied": true, "prisoner_id": "P00213"},
+                    {"bed_id": "S3W2B-C03-B3", "occupied": true, "prisoner_id": "P00214"},
+                    {"bed_id": "S3W2B-C03-B4", "occupied": true, "prisoner_id": "P00215"}
+                  ]},
+                  {"cell_id": "S3W2B-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2B-C04-B1", "occupied": true, "prisoner_id": "P00216"},
+                    {"bed_id": "S3W2B-C04-B2", "occupied": true, "prisoner_id": "P00217"},
+                    {"bed_id": "S3W2B-C04-B3", "occupied": true, "prisoner_id": "P00218"},
+                    {"bed_id": "S3W2B-C04-B4", "occupied": true, "prisoner_id": "P00219"}
+                  ]},
+                  {"cell_id": "S3W2B-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2B-C05-B1", "occupied": true, "prisoner_id": "P00220"},
+                    {"bed_id": "S3W2B-C05-B2", "occupied": true, "prisoner_id": "P00221"},
+                    {"bed_id": "S3W2B-C05-B3", "occupied": true, "prisoner_id": "P00222"},
+                    {"bed_id": "S3W2B-C05-B4", "occupied": true, "prisoner_id": "P00223"}
+                  ]},
+                  {"cell_id": "S3W2B-C06", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2B-C06-B1", "occupied": true, "prisoner_id": "P00224"},
+                    {"bed_id": "S3W2B-C06-B2", "occupied": true, "prisoner_id": "P00225"},
+                    {"bed_id": "S3W2B-C06-B3", "occupied": true, "prisoner_id": "P00226"},
+                    {"bed_id": "S3W2B-C06-B4", "occupied": true, "prisoner_id": "P00227"}
+                  ]}
+                ]
+              },
+              {
+                "wing_id": "S3W2C",
+                "sex_assignment": "Male",
+                "cells": [
+                  {"cell_id": "S3W2C-C01", "cell_type": "single", "beds": [{"bed_id": "S3W2C-C01-B1", "occupied": true, "prisoner_id": "P00228"}]},
+                  {"cell_id": "S3W2C-C02", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2C-C02-B1", "occupied": true, "prisoner_id": "P00229"},
+                    {"bed_id": "S3W2C-C02-B2", "occupied": true, "prisoner_id": "P00230"},
+                    {"bed_id": "S3W2C-C02-B3", "occupied": true, "prisoner_id": "P00231"},
+                    {"bed_id": "S3W2C-C02-B4", "occupied": true, "prisoner_id": "P00232"}
+                  ]},
+                  {"cell_id": "S3W2C-C03", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2C-C03-B1", "occupied": true, "prisoner_id": "P00233"},
+                    {"bed_id": "S3W2C-C03-B2", "occupied": true, "prisoner_id": "P00234"},
+                    {"bed_id": "S3W2C-C03-B3", "occupied": true, "prisoner_id": "P00235"},
+                    {"bed_id": "S3W2C-C03-B4", "occupied": true, "prisoner_id": "P00236"}
+                  ]},
+                  {"cell_id": "S3W2C-C04", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2C-C04-B1", "occupied": true, "prisoner_id": "P00237"},
+                    {"bed_id": "S3W2C-C04-B2", "occupied": true, "prisoner_id": "P00238"},
+                    {"bed_id": "S3W2C-C04-B3", "occupied": true, "prisoner_id": "P00239"},
+                    {"bed_id": "S3W2C-C04-B4", "occupied": true, "prisoner_id": "P00240"}
+                  ]},
+                  {"cell_id": "S3W2C-C05", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2C-C05-B1", "occupied": true, "prisoner_id": "P00241"},
+                    {"bed_id": "S3W2C-C05-B2", "occupied": true, "prisoner_id": "P00242"},
+                    {"bed_id": "S3W2C-C05-B3", "occupied": true, "prisoner_id": "P00243"},
+                    {"bed_id": "S3W2C-C05-B4", "occupied": true, "prisoner_id": "P00244"}
+                  ]},
+                  {"cell_id": "S3W2C-C06", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2C-C06-B1", "occupied": true, "prisoner_id": "P00245"},
+                    {"bed_id": "S3W2C-C06-B2", "occupied": true, "prisoner_id": "P00246"},
+                    {"bed_id": "S3W2C-C06-B3", "occupied": true, "prisoner_id": "P00247"},
+                    {"bed_id": "S3W2C-C06-B4", "occupied": true, "prisoner_id": "P00248"}
+                  ]},
+                  {"cell_id": "S3W2C-C07", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2C-C07-B1", "occupied": true, "prisoner_id": "P00249"},
+                    {"bed_id": "S3W2C-C07-B2", "occupied": true, "prisoner_id": "P00250"},
+                    {"bed_id": "S3W2C-C07-B3", "occupied": true, "prisoner_id": "P00251"},
+                    {"bed_id": "S3W2C-C07-B4", "occupied": false, "prisoner_id": null}
+                  ]},
+                  {"cell_id": "S3W2C-C08", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2C-C08-B1", "occupied": true, "prisoner_id": "P00252"},
+                    {"bed_id": "S3W2C-C08-B2", "occupied": true, "prisoner_id": "P00253"},
+                    {"bed_id": "S3W2C-C08-B3", "occupied": true, "prisoner_id": "P00254"},
+                    {"bed_id": "S3W2C-C08-B4", "occupied": true, "prisoner_id": "P00255"}
+                  ]},
+                  {"cell_id": "S3W2C-C09", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2C-C09-B1", "occupied": true, "prisoner_id": "P00256"},
+                    {"bed_id": "S3W2C-C09-B2", "occupied": true, "prisoner_id": "P00257"},
+                    {"bed_id": "S3W2C-C09-B3", "occupied": true, "prisoner_id": "P00258"},
+                    {"bed_id": "S3W2C-C09-B4", "occupied": true, "prisoner_id": "P00259"}
+                  ]},
+                  {"cell_id": "S3W2C-C10", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2C-C10-B1", "occupied": true, "prisoner_id": "P00260"},
+                    {"bed_id": "S3W2C-C10-B2", "occupied": true, "prisoner_id": "P00261"},
+                    {"bed_id": "S3W2C-C10-B3", "occupied": true, "prisoner_id": "P00262"},
+                    {"bed_id": "S3W2C-C10-B4", "occupied": false, "prisoner_id": null}
+                  ]},
+                  {"cell_id": "S3W2C-C11", "cell_type": "quad", "beds": [
+                    {"bed_id": "S3W2C-C11-B1", "occupied": true, "prisoner_id": "P00263"},
+                    {"bed_id": "S3W2C-C11-B2", "occupied": true, "prisoner_id": "P00264"},
+                    {"bed_id": "S3W2C-C11-B3", "occupied": true, "prisoner_id": "P00265"},
+                    {"bed_id": "S3W2C-C11-B4", "occupied": false, "prisoner_id": null}
+                  ]}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
