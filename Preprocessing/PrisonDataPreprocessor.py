@@ -156,7 +156,6 @@ class PrisonDataPreprocessor:
             prisoner_encoded['age_category_encoded'] = self.col_mapping['age_category'][prisoner['age_category']]
             prisoner_encoded['sex_encoded'] = self.col_mapping[sex_col][prisoner['sex']]
             prisoner_encoded['supervision_level_encoded'] = self.col_mapping['supervision_level'][prisoner['supervision_level']]
-            
             prisoners_encoded.append(prisoner_encoded)
         
         return prisoners_encoded
@@ -181,7 +180,7 @@ class PrisonDataPreprocessor:
         # Drop duplicate columns
         merged_df = merged_df.loc[:, ~merged_df.columns.duplicated()]
         
-        # Drop unnecessary columns
+        # Drop unnecessary columns (but preserve boolean columns)
         columns_to_drop = ['sex_assignment', 'age_category_x', 
                           'supervision_level_x', 'cell_id', 'occupied']
         merged_df = merged_df.drop(columns=[col for col in columns_to_drop 
@@ -251,6 +250,13 @@ class PrisonDataPreprocessor:
         """
         bed_sex = {}
         bed_age = {}
+        life_without_parole = {}
+        untried = {}
+        terrorism = {}
+        subject_to_removal = {}
+        supervised_release = {}
+        sexual_or_domestic_harm = {}
+        non_harassment_order = {}
         bed_supervision = {}
         bed_time_served = {} if use_time_served else None
         
@@ -263,6 +269,13 @@ class PrisonDataPreprocessor:
             bed_sex[bed_id] = int(row[sex_col])
             bed_age[bed_id] = int(row['age_category'])
             bed_supervision[bed_id] = int(row['supervision_level'])
+            life_without_parole[bed_id] = int(row.get('is_life_without_parole', 0))
+            untried[bed_id] = int(row.get('is_untried', 0))
+            terrorism[bed_id] = int(row.get('is_terrorism', 0))
+            subject_to_removal[bed_id] = int(row.get('is_subject_to_removal', 0))
+            supervised_release[bed_id] = int(row.get('is_supervised_release', 0))
+            sexual_or_domestic_harm[bed_id] = int(row.get('is_sexual_or_domestic_harm', 0))
+            non_harassment_order[bed_id] = int(row.get('is_non_harassment_order', 0))
             
             if use_time_served and 'time_served' in row:
                 bed_time_served[bed_id] = int(row['time_served'])
@@ -272,7 +285,14 @@ class PrisonDataPreprocessor:
             'bed_age': bed_age,
             'bed_supervision': bed_supervision,
             'bed_min': int(df_encoded['bed_id'].min()),
-            'bed_max': int(df_encoded['bed_id'].max())
+            'bed_max': int(df_encoded['bed_id'].max()), 
+            'is_life_without_parole': life_without_parole,
+            'is_untried': untried,
+            'is_terrorism': terrorism,
+            'is_subject_to_removal': subject_to_removal,
+            'is_supervised_release': supervised_release,
+            'is_sexual_or_domestic_harm': sexual_or_domestic_harm,
+            'is_non_harassment_order': non_harassment_order
         }
         
         if bed_time_served is not None:
