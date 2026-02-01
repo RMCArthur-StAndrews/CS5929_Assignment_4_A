@@ -15,10 +15,9 @@ class PrisonDataPreprocessor:
     """
     A class to handle preprocessing of prison and prisoner data.
     
-    Attributes:
-        encoder (OrdinalEncoder): Sklearn encoder for categorical variables
-        col_mapping (Dict): Mapping of categorical columns to encoded values
-        non_numerical_cols (pd.Index): Index of non-numerical column names
+    @property encoder - OrdinalEncoder: Sklearn encoder for categorical variables
+    @property col_mapping - Dict: Mapping of categorical columns to encoded values
+    @property non_numerical_cols - pd.Index: Index of non-numerical column names
     """
     
     def __init__(self):
@@ -31,11 +30,8 @@ class PrisonDataPreprocessor:
         """
         Load and flatten prison template data from JSON file.
         
-        Args:
-            filepath (str): Path to the prison template JSON file
-            
-        Returns:
-            pd.DataFrame: Flattened prison data with bed records
+        @param filepath - str: Path to the prison template JSON file
+        @returns pd.DataFrame: Flattened prison data with bed records
         """
         with open(filepath, 'r') as f:
             data = json.load(f)
@@ -84,13 +80,10 @@ class PrisonDataPreprocessor:
         """
         Load prisoner list from JSON file.
         
-        Args:
-            filepath (str): Path to the prisoner list JSON file
-            key (str): Key in JSON to access prisoner list
-            limit (int, optional): Maximum number of prisoners to load
-            
-        Returns:
-            List[Dict]: List of prisoner dictionaries
+        @param filepath - str: Path to the prisoner list JSON file
+        @param key - str: Key in JSON to access prisoner list
+        @param limit - int, optional: Maximum number of prisoners to load
+        @returns List[Dict]: List of prisoner dictionaries
         """
         with open(filepath, 'r') as f:
             data = json.load(f)
@@ -106,11 +99,8 @@ class PrisonDataPreprocessor:
         """
         Encode non-numerical columns in a DataFrame.
         
-        Args:
-            df (pd.DataFrame): DataFrame to encode
-            
-        Returns:
-            pd.DataFrame: Encoded DataFrame
+        @param df - pd.DataFrame: DataFrame to encode
+        @returns pd.DataFrame: Encoded DataFrame
         """
         df_encoded = df.copy()
         self.non_numerical_cols = df.select_dtypes(include=['object', 'bool']).columns
@@ -122,7 +112,9 @@ class PrisonDataPreprocessor:
         return df_encoded
     
     def _create_column_mapping(self):
-        """Create mapping from categorical values to encoded integers."""
+        """
+        Create mapping from categorical values to encoded integers.
+        """
         self.col_mapping = {}
         for i, col in enumerate(self.non_numerical_cols):
             categories = self.encoder.categories_[i]
@@ -132,14 +124,9 @@ class PrisonDataPreprocessor:
         """
         Encode prisoner data using the existing encoder mapping.
         
-        Args:
-            prisoners (List[Dict]): List of prisoner dictionaries
-            
-        Returns:
-            List[Dict]: List of encoded prisoner dictionaries
-            
-        Raises:
-            ValueError: If encoder has not been fitted yet
+        @param prisoners - List[Dict]: List of prisoner dictionaries
+        @returns List[Dict]: List of encoded prisoner dictionaries
+        @raises ValueError: If encoder has not been fitted yet
         """
         if not self.col_mapping:
             raise ValueError("Encoder must be fitted first. Call encode_dataframe() before encoding prisoners.")
@@ -165,17 +152,20 @@ class PrisonDataPreprocessor:
         """
         Merge prisoner and bed DataFrames on prisoner_id.
         
-        Args:
-            prisoners_df (pd.DataFrame): DataFrame of prisoners
-            beds_df (pd.DataFrame): DataFrame of beds
-            
-        Returns:
-            pd.DataFrame: Merged and cleaned DataFrame
+        @param prisoners_df - pd.DataFrame: DataFrame of prisoners
+        @param beds_df - pd.DataFrame: DataFrame of beds
+        @returns DataFrame: Merged and cleaned DataFrame
         """
         merged_df = pd.merge(prisoners_df, beds_df, 
                             left_on='prisoner_id', 
                             right_on='prisoner_id', 
                             how='inner')
+        
+        # Deduplicate on bed_id (data quality guardrail: a bed should have exactly one occupant)
+        duplicate_beds = merged_df[merged_df['bed_id'].duplicated(keep=False)]
+        if not duplicate_beds.empty:
+            # Keep the first occurrence per bed_id to avoid conflicting occupants
+            merged_df = merged_df.drop_duplicates(subset=['bed_id'], keep='first')
         
         # Drop duplicate columns
         merged_df = merged_df.loc[:, ~merged_df.columns.duplicated()]
@@ -196,17 +186,16 @@ class PrisonDataPreprocessor:
     
     def prepare_conjure_mappings(self, prisoners_encoded: List[Dict], 
                                 df_encoded: pd.DataFrame,
-                                use_time_served: bool = False) -> Dict:
+                                use_time_served: bool = False,
+                                df_original: pd.DataFrame = None) -> Dict:
         """
         Prepare data mappings for Conjure constraint solver.
         
-        Args:
-            prisoners_encoded (List[Dict]): List of encoded prisoner dictionaries
-            df_encoded (pd.DataFrame): Encoded DataFrame with bed/prisoner data
-            use_time_served (bool): Whether to include time_served data
-            
-        Returns:
-            Dict: Dictionary containing all mappings and ranges for Conjure
+        @param prisoners_encoded - List[Dict]: List of encoded prisoner dictionaries
+        @param df_encoded - pd.DataFrame: Encoded DataFrame with bed/prisoner data
+        @param use_time_served - bool: Whether to include time_served data
+        @param df_original DataFrame: Original unencoded DataFrame (required if use_time_served=True)
+        @returns results: Dictionary containing all mappings and ranges for Conjure
         """
         # Prisoner mappings
         incoming_prisoners_sex = {}
@@ -222,7 +211,7 @@ class PrisonDataPreprocessor:
             incoming_prisoners_supervision[prisoner_id] = int(prisoner['supervision_level_encoded'])
         
         # Bed mappings
-        bed_data = self._extract_bed_mappings(df_encoded, use_time_served)
+        bed_data = self._extract_bed_mappings(df_encoded, use_time_served, df_original)
         
         # Create result dictionary
         result = {
@@ -237,16 +226,15 @@ class PrisonDataPreprocessor:
         return result
     
     def _extract_bed_mappings(self, df_encoded: pd.DataFrame, 
-                             use_time_served: bool = False) -> Dict:
+                             use_time_served: bool = False,
+                             df_original: pd.DataFrame = None) -> Dict:
         """
         Extract bed mappings from encoded DataFrame.
         
-        Args:
-            df_encoded (pd.DataFrame): Encoded DataFrame
-            use_time_served (bool): Whether to include time_served data
-            
-        Returns:
-            Dict: Dictionary of bed mappings
+        @param df_encoded - pd.DataFrame: Encoded DataFrame
+        @param use_time_served - bool: Whether to include time_served data
+        @param df_original - pd.DataFrame: Original unencoded DataFrame (required if use_time_served=True)
+        @returns result: Dictionary of bed mappings
         """
         bed_sex = {}
         bed_age = {}
@@ -263,6 +251,15 @@ class PrisonDataPreprocessor:
         # Determine which column name to use for sex (check once, not per row)
         sex_col = 'sex_assignment' if 'sex_assignment' in df_encoded.columns else 'sex'
         
+        # Build a mapping from encoded bed_id to original time_served using matching indices
+        bed_id_to_time_served = {}
+        if use_time_served and df_original is not None:
+            # Both dataframes should have the same indices and same row order
+            for idx in df_encoded.index:
+                encoded_bed_id = int(df_encoded.loc[idx, 'bed_id'])
+                original_time_served = int(df_original.loc[idx, 'time_served'])
+                bed_id_to_time_served[encoded_bed_id] = original_time_served
+        
         for index, row in df_encoded.iterrows():
             bed_id = int(row['bed_id'])
             
@@ -277,8 +274,12 @@ class PrisonDataPreprocessor:
             sexual_or_domestic_harm[bed_id] = int(row.get('is_sexual_or_domestic_harm', 0))
             non_harassment_order[bed_id] = int(row.get('is_non_harassment_order', 0))
             
-            if use_time_served and 'time_served' in row:
-                bed_time_served[bed_id] = int(row['time_served'])
+            # Use the pre-built mapping
+            if use_time_served:
+                if bed_id in bed_id_to_time_served:
+                    bed_time_served[bed_id] = bed_id_to_time_served[bed_id]
+                else:
+                    raise ValueError(f"time_served data not found for bed_id {bed_id}")
         
         result = {
             'bed_sex': bed_sex,
@@ -305,12 +306,9 @@ class PrisonDataPreprocessor:
         """
         Prepare mappings for prison allocation task with sequential bed IDs.
         
-        Args:
-            prisoners_encoded (List[Dict]): List of encoded prisoner dictionaries
-            empty_beds_df (pd.DataFrame): DataFrame containing only empty beds
-            
-        Returns:
-            Dict: Dictionary containing all mappings and ranges for allocation
+        @param prisoners_encoded - List[Dict]: List of encoded prisoner dictionaries
+        @param empty_beds_df - pd.DataFrame: DataFrame containing only empty beds
+        @returns results: Dictionary containing all mappings and ranges for allocation
         """
         # Prisoner mappings
         incoming_prisoners_sex = {}
@@ -354,11 +352,8 @@ class PrisonDataPreprocessor:
         """
         Decode encoded bed attributes back to original categorical values.
         
-        Args:
-            bed_row (pd.Series): Row from encoded DataFrame
-            
-        Returns:
-            Dict[str, str]: Dictionary with decoded attributes
+        @param bed_row - pd.Series: Row from encoded DataFrame
+        @returns bed attributes: Dictionary with decoded attributes
         """
         non_numerical_list = list(self.non_numerical_cols)
         
